@@ -136,12 +136,12 @@ public class LoginFile extends JFrame {
 		lblPassword.setBounds(33, 257, 91, 14);
 		panel_1.add(lblPassword);
 
-		JButton btnLoginHere = new JButton("Login Here");
+		JButton btnLoginHere = new JButton("Login");
 		btnLoginHere.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
 		btnLoginHere.setForeground(new Color(255, 255, 255));
 		btnLoginHere.setFont(new Font("Serif", Font.BOLD, 10));
 		btnLoginHere.setBackground(new Color(0, 102, 153));
-		btnLoginHere.setBounds(77, 350, 175, 30);
+		btnLoginHere.setBounds(33, 349, 134, 30);
 		panel_1.add(btnLoginHere);
 
 		JCheckBox chckbxForgetPassword = new JCheckBox("Forget Password");
@@ -150,5 +150,13 @@ public class LoginFile extends JFrame {
 		chckbxForgetPassword.setFont(new Font("Serif", Font.PLAIN, 10));
 		chckbxForgetPassword.setBounds(198, 309, 105, 23);
 		panel_1.add(chckbxForgetPassword);
+		
+		JButton btnRegister = new JButton("Register");
+		btnRegister.setForeground(Color.WHITE);
+		btnRegister.setFont(new Font("Serif", Font.BOLD, 10));
+		btnRegister.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
+		btnRegister.setBackground(new Color(0, 102, 153));
+		btnRegister.setBounds(177, 349, 134, 30);
+		panel_1.add(btnRegister);
 	}
 }
