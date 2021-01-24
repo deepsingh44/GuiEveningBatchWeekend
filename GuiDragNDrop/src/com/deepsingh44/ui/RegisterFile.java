@@ -71,7 +71,7 @@ public class RegisterFile extends JFrame {
 		label.setForeground(Color.WHITE);
 		label.setFont(new Font("Serif", Font.PLAIN, 12));
 		label.setBounds(10, 207, 252, 168);
-		panel.add(label);
+		panel.add(label);;
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBackground(new Color(0, 51, 51));
