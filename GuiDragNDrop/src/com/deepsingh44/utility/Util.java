@@ -1,6 +1,7 @@
 package com.deepsingh44.utility;
 
 import java.awt.Graphics2D;
+import java.awt.Image;
 import java.awt.RenderingHints;
 import java.awt.image.BufferedImage;
 import javax.swing.ImageIcon;
@@ -14,6 +15,11 @@ public class Util {
 		gd.drawImage(image.getImage(), 0, 0, width, height, null);
 		gd.dispose();
 		return new ImageIcon(bi);
+	}
+	
+	public static ImageIcon resizeImage(ImageIcon imageicon, int width, int height) {
+		Image image = imageicon.getImage().getScaledInstance(width, height, Image.SCALE_SMOOTH);
+		return new ImageIcon(image);
 	}
 
 }
