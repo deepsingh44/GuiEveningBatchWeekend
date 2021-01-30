@@ -63,6 +63,7 @@ public class HomePage extends JFrame {
 		menuBar.add(mnView);
 		
 		JMenuItem mntmListOfB = new JMenuItem("List Of Books");
+		
 		mnView.add(mntmListOfB);
 
 		JMenu mnHelp = new JMenu("Help");
@@ -77,9 +78,17 @@ public class HomePage extends JFrame {
 
 		mntmNewFile.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				NewAccount account = new NewAccount();
+				AddBook account = new AddBook();
 				desktopPane.add(account);
 				account.setVisible(true);
+			}
+		});
+		
+		mntmListOfB.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			BookList bookList=new BookList();
+			desktopPane.add(bookList);
+			bookList.setVisible(true);
 			}
 		});
 	}

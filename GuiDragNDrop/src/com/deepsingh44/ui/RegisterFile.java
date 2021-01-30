@@ -18,6 +18,8 @@ import javax.swing.SwingConstants;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JButton;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class RegisterFile extends JFrame {
 
@@ -131,6 +133,12 @@ public class RegisterFile extends JFrame {
 		panel_1.add(btnSubmitHere);
 		
 		JButton btnLoginHere = new JButton("Login Here");
+		btnLoginHere.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new LoginFile().setVisible(true);
+				dispose();
+			}
+		});
 		btnLoginHere.setBackground(new Color(0, 102, 153));
 		btnLoginHere.setForeground(new Color(255, 255, 255));
 		btnLoginHere.setBounds(210, 367, 122, 30);

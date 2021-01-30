@@ -23,6 +23,8 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JPasswordField;
 import javax.swing.JCheckBox;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class LoginFile extends JFrame {
 
@@ -150,8 +152,14 @@ public class LoginFile extends JFrame {
 		chckbxForgetPassword.setFont(new Font("Serif", Font.PLAIN, 10));
 		chckbxForgetPassword.setBounds(198, 309, 105, 23);
 		panel_1.add(chckbxForgetPassword);
-		
+
 		JButton btnRegister = new JButton("Register");
+		btnRegister.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new RegisterFile().setVisible(true);
+				dispose();
+			}
+		});
 		btnRegister.setForeground(Color.WHITE);
 		btnRegister.setFont(new Font("Serif", Font.BOLD, 10));
 		btnRegister.setBorder(new BevelBorder(BevelBorder.RAISED, null, null, null, null));
