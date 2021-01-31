@@ -54,7 +54,7 @@ public class BookList extends JInternalFrame {
 		getContentPane().add(panel, BorderLayout.CENTER);
 		panel.setLayout(null);
 
-		String[] cols = { "TITLE", "PRICE", "AUTHOR" };
+		String[] cols = { "ID","TITLE", "PRICE", "AUTHOR" };
 		DefaultTableModel dt = new DefaultTableModel(cols, 0);
 
 		table = new JTable(dt);
@@ -111,10 +111,11 @@ public class BookList extends JInternalFrame {
 				String author = tauthor.getText();
 
 				DefaultTableModel dd = (DefaultTableModel) table.getModel();
-				dd.addRow(new String[] { title, price, author });
+				dd.addRow(new Object[] {count++, title, price, author });
 
 			}
 		});
 
 	}
+	int count=1;
 }
